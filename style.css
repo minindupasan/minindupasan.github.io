@@ -95,17 +95,52 @@ body {
     color: #424242;
   }
 
-  .read-more {
-    border: none;
-    border-radius: 25px;
-    color: white;
-    background-image: linear-gradient(to right, #3C1053, #AD5389);
-    padding: 15px 32px;
-    text-align: 0;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+a{
+  color: #fff;
+  text-decoration: none;
+}
+.custom-button {
+  position: relative;
+  width: 155px; /* Adjust the width as needed */
+  height: 60px; /* Adjust the height as needed */
+  background-image: linear-gradient(to right, #3C1053 , #AD5389); /* Gradient background */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: left center; /* Aligns the background image to the left */
+  background-size: contain; /* Ensures the entire image is visible */
+  border: none; /* Optional: to visualize the container */
+  border-radius: 30px;
+  display:flex;
+  align-items: center;
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline from link */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.read-more-icon{
+  border: none;
+  display:flex;
+  justify-content:left;
+  width: 22%;
+  height: auto;
+  padding: 0 10px;
+}
+.read-more-text{
+  display: flex;
+  font-size: 18px;
+  padding-left: 10px;
+  justify-content: right;
+
+}
+.custom-button:hover {   
+  background-image: linear-gradient(to right, #ffffff , #ffffff); /* Darker blue on hover */
   
+}
+
+.custom-button:active {
+  background-image: #004085; /* Even darker blue on click */
+}
+
+.custom-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
