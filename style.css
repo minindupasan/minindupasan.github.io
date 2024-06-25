@@ -2,6 +2,7 @@ body {
     margin: 0px 45px;
     background-color: #000000;
     color: #fff;
+    overflow: hidden;
 }
 
 .poppins-regular {
@@ -61,9 +62,6 @@ body {
 .nav-list li {
     margin: 0 20px;
 }
-.nav-list ul{
-
-}
 
 .nav-list a {
     color: #ffffff;
@@ -99,48 +97,78 @@ a{
   color: #fff;
   text-decoration: none;
 }
-.custom-button {
+.readmore-button {
   position: relative;
-  width: 155px; /* Adjust the width as needed */
-  height: 60px; /* Adjust the height as needed */
-  background-image: linear-gradient(to right, #3C1053 , #AD5389); /* Gradient background */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
-  background-position: left center; /* Aligns the background image to the left */
-  background-size: contain; /* Ensures the entire image is visible */
-  border: none; /* Optional: to visualize the container */
+  margin: 20px;
+  width: 185px; 
+  height: 55px; 
+  background: linear-gradient(to right, #3C1053 , #AD5389); 
+  background-repeat: no-repeat;
+  background-position: left center; 
+  background-size: contain; 
+  border: none; 
   border-radius: 30px;
   display:flex;
   align-items: center;
-  cursor: pointer; /* Pointer cursor on hover */
-  text-decoration: none; /* Remove underline from link */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  cursor: pointer; 
+  text-decoration: none; 
+  z-index: inherit;
+  cursor: pointer;
 }
-
+.readmore-button::after{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  margin:4%;
+  width: 95%;
+  height: 95%;
+  border: none;
+  border-radius: 30px;
+}
+.readmore-button::before{
+  content: "";
+  z-index: -1;
+  background-image:linear-gradient(
+    45deg,#3C1053 , #AD5389,#ffffff,#AD5389,#3C1053
+  );
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 20px;
+  background-size: 600%;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  filter: blur(35px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+}
+@keyframes glowing {
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+.readmore-button:hover::before{
+  opacity: 1;
+}
 .read-more-icon{
   border: none;
   display:flex;
   justify-content:left;
-  width: 22%;
+  width: 16%;
   height: auto;
-  padding: 0 10px;
+  padding: 0 13px;
 }
 .read-more-text{
   display: flex;
-  font-size: 18px;
-  padding-left: 10px;
+  font-size: 20px;
+  padding-left: none;
   justify-content: right;
-
-}
-.custom-button:hover {   
-  background-image: linear-gradient(to right, #ffffff , #ffffff); /* Darker blue on hover */
   
-}
-
-.custom-button:active {
-  background-image: #004085; /* Even darker blue on click */
-}
-
-.custom-button:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
 }
