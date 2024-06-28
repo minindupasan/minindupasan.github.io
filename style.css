@@ -46,11 +46,13 @@ a{
   }
 
 nav{
+  box-sizing:border-box;
   background-color:  #000000;
   /* filter: blur(20px); */
   padding: 0 50px;
 }
 .navbar{
+  box-sizing: border-box;
   width:100%;
   padding-top: 20px;
   list-style: none;
@@ -82,14 +84,19 @@ nav{
   width: 100%;
   height: 100%;
 }
+.navbar ul{
+    box-sizing: border-box;
+}
 
 .navbar li{
+  box-sizing: border-box;
   height: 30px;
   margin: 0 10px;
 }
 .navbar a{
+  box-sizing: border-box;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 35px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -107,9 +114,15 @@ nav{
 .navbar svg path:hover{
   fill: #AD5389;
 }
-
+.navbar-item{
+  box-sizing: border-box;
+  margin: 0;
+  border: 2px solid #ad538900;
+  border-radius: 20px;
+}
 .navbar-item:hover{
   box-sizing: border-box;
+  margin: 0;
   border: 2px solid #AD5389;
   border-radius: 20px;
 }
@@ -119,10 +132,6 @@ nav{
     color: #424242;
 }
 
-a{
-  color: #fff;
-  text-decoration: none;
-}
 .grad-text{            
   background: linear-gradient(
   125deg,#3c1053, #AD5389); 
@@ -138,7 +147,7 @@ a{
 }
 .readmore-button {
   position: relative;
-  margin: 20px;
+  margin: 20px 60px;
   width: 185px; 
   height: 55px; 
   background: linear-gradient(to right, #3C1053 , #AD5389); 
