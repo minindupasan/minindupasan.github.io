@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   min-height: 100vh;  
@@ -46,19 +45,22 @@ a{
   }
 
 nav{
-  box-sizing:border-box;
-  background-color:  #000000;
-  /* filter: blur(20px); */
-  padding: 0 50px;
+  background:linear-gradient(0deg, rgba(0%, 0%, 0%, 0), #000000);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  top: 0;
 }
 .navbar{
-  box-sizing: border-box;
+  box-sizing: content-box;
   width:100%;
-  padding-top: 20px;
+  height: 60px;
+padding: 0;
   list-style: none;
   display: flex;
-  justify-content: flex-end; /*change this*/
-  align-items: center; 
+  justify-content: center; /*change this*/
+  align-items: center;
 }
 .sidebar{
   position: fixed;
@@ -85,15 +87,26 @@ nav{
   height: 100%;
 }
 .navbar ul{
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-
 .navbar li{
   box-sizing: border-box;
   height: 30px;
   margin: 0 10px;
 }
-.navbar a{
+.navbar-item-icon{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .navbar-item{
   box-sizing: border-box;
   height: 100%;
   padding: 0 35px;
@@ -112,7 +125,7 @@ nav{
   fill: #fff;
 }
 .navbar svg path:hover{
-  fill: #AD5389;
+  fill: #ffffff;
 }
 .navbar-item{
   box-sizing: border-box;
@@ -123,21 +136,33 @@ nav{
 .navbar-item:hover{
   box-sizing: border-box;
   margin: 0;
-  border: 2px solid #AD5389;
+  border: 2px solid #ffffff;
   border-radius: 20px;
+}
+#navbar-logo-container{
+  box-sizing: border-box;
+  display: flex;
+  background:linear-gradient(125deg, #3C1053, #AD5389);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 150px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+a .menu{
+  padding: 0;
+  margin: 0;
 }
 
 .hero-title{
-    font-size: 100px;
-    color: #424242;
+  font-size: 100px;
+  color: #424242;
+  margin-top: 75px;
 }
-
-.grad-text{            
-  background: linear-gradient(
-  125deg,#3c1053, #AD5389); 
-  -webkit-text-fill-color: transparent; 
-  -webkit-background-clip: text;
- }
 .hero-description{
   font-size: 35px;
   position: relative;
@@ -145,6 +170,12 @@ nav{
   width: 50%;
   margin: none;
 }
+.grad-text{            
+  background: linear-gradient(
+  125deg,#3c1053, #AD5389); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+ }
 .readmore-button {
   position: relative;
   margin: 20px 60px;
