@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   border: none;
+  box-sizing: border-box;
 }
 body {
+  margin: 0 40px;
   min-height: 100vh;  
   background-color: #000000;
   color: #fff;
@@ -54,13 +56,12 @@ nav{
   top: 0;
 }
 .navbar{
-  box-sizing: content-box;
   width:100%;
   height: 60px;
-padding: 0;
+  padding: 0;
   list-style: none;
   display: flex;
-  justify-content: center; /*change this*/
+  justify-content: space-evenly; /*change this*/
   align-items: center;
 }
 .sidebar{
@@ -96,7 +97,6 @@ padding: 0;
   margin: 0;
 }
 .navbar li{
-  box-sizing: border-box;
   height: 30px;
   margin: 0 10px;
 }
@@ -108,7 +108,6 @@ padding: 0;
   justify-content: center;
 }
 .navbar .navbar-item{
-  box-sizing: border-box;
   height: 100%;
   padding: 0 35px;
   text-decoration: none;
@@ -116,43 +115,32 @@ padding: 0;
   align-items: center;
   justify-content: center;
 }
-.navbar svg{
+.menu-icon{
   padding: 0;
   margin: 0;
   width: 100%;
   height: 30px;
 }
-.navbar svg path{
-  fill: #fff;
-}
-.navbar svg path:hover{
-  fill: #ffffff;
-}
 .navbar-item{
-  box-sizing: border-box;
   margin: 0;
   border: 2px solid #ad538900;
   border-radius: 20px;
 }
 .navbar-item:hover{
-  box-sizing: border-box;
   margin: 0;
   border: 2px solid #ffffff;
   border-radius: 20px;
 }
 #navbar-logo{
-  width: 35px;
+  width: 30px;
   height: 100%;
   margin: 0;
   padding: 0;
-  border: none;
   align-items: center;
   justify-content: center;
-
 }
 #navbar-logo-container{
-  box-sizing: border-box;
-  display: flex;
+  display:flex;
   background:linear-gradient(125deg, #3C1053, #AD5389);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -174,16 +162,27 @@ a .menu{
   font-size: 100px;
   color: #424242;
   margin-top: 75px;
+  width: 27rem;
   position: relative;
+  /* outline: 2px solid rgb(0, 238, 255); */
 }
 .hero-description{
+  position: relative;
   display: block;
   font-size: 35px;
   line-height: 1;
   position: relative;
-  /* top: -50px; */
-  width: 50%;
-  margin: none;
+  width: 30rem;
+  margin-top: 30px;
+  margin-bottom: 75px;
+
+  /* outline: 2px solid red; */
+}
+.underline{
+ position: absolute;
+  top: 4.7rem;
+  left: 8.5rem;
+ /* outline: .2rem solid yellow; */
 }
 .grad-text{            
   background: linear-gradient(
@@ -193,7 +192,7 @@ a .menu{
  }
 .readmore-button {
   position: relative;
-  margin: 20px 60px;
+  margin: 50px 100px;
   width: 185px; 
   height: 55px; 
   background: linear-gradient(to right, #3C1053 , #AD5389); 
