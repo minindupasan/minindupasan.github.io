@@ -12,7 +12,7 @@ body {
   /* overflow: hidden; */
 }
 a{
-  color: #fff;
+  color: #f9f9f9;
   text-decoration: none;
 }
 
@@ -47,46 +47,87 @@ a{
     font-style: normal;
   }
 
-nav{
-  background:linear-gradient(0deg, rgba(0%, 0%, 0%, 0), #000000);
+.navbar{
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0), #000000);
   backdrop-filter: blur(10px);
   position: fixed;
   z-index: 1;
   width: 100vw;
   top: 0;
-}
-.navbar{
   width:100%;
   height: 60px;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-evenly; /*change this*/
+  display: none;
+  justify-content: space-evenly;
   align-items: center;
 }
 .sidebar{
+  padding-left: 20px;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 250px;
-  z-index: 999;
+  z-index: 1000;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  display: none; /*change this*/
+  display:flex; /*change this*/
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  border-radius: 30px;
+  text-align: center;
 }
 .sidebar li{
-  margin: 0;
+  margin: 10px;
   width: 100%;
   padding: 10px 0;
 }
 .sidebar a{
   width: 100%;
   height: 100%;
+}
+#sidebar-logo{
+  width: 30px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+#sidebar-logo-container{
+  display:flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.sidebar-item{
+  background-color: #00000000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+
+}
+.sidebar-item:hover{
+  background-color: #ffffff;
+  color: #000000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+
 }
 .navbar ul{
   display: flex;
@@ -127,6 +168,11 @@ nav{
   border-radius: 20px;
 }
 .navbar-item:hover{
+  margin: 0;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+.sidebar-item:hover{
   margin: 0;
   border: 2px solid #ffffff;
   border-radius: 20px;
