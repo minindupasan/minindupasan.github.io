@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   min-height: 100vh;  
@@ -54,7 +55,7 @@ nav{
   padding-top: 20px;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /*change this*/
   align-items: center; 
 }
 .sidebar{
@@ -67,7 +68,7 @@ nav{
   list-style: none;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  display: none; 
+  display: none; /*change this*/
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -92,6 +93,7 @@ nav{
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .navbar svg{
   padding: 0;
@@ -102,19 +104,20 @@ nav{
 .navbar svg path{
   fill: #fff;
 }
-
-.navbar a:hover{
-  background: linear-gradient(125deg, #3C1053 , #AD5389);
-  border-radius: 20px;
+.navbar svg path:hover{
+  fill: #AD5389;
 }
-.navbar li:last-child{
-  margin-left: auto;
+
+.navbar-item:hover{
+  box-sizing: border-box;
+  border: 2px solid #AD5389;
+  border-radius: 20px;
 }
 
 .hero-title{
     font-size: 100px;
     color: #424242;
-  }
+}
 
 a{
   color: #fff;
@@ -195,12 +198,12 @@ a{
 }
 
 .read-more-icon{
-  border: none;
-  display:flex;
-  justify-content:left;
-  width: 16%;
-  height: auto;
-  padding: 0 13px;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+  padding:0;
+  margin: 10px;
+
 }
 .read-more-text{
   display: flex;
