@@ -45,25 +45,34 @@ a{
     font-weight: 800;
     font-style: normal;
   }
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
 .navbar{
-  background:linear-gradient(0deg, rgba(0, 0, 0, 0), #000000);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000000);
   backdrop-filter: blur(10px);
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: calc(100vw - 40vw); /* Adjust width to account for margins */
   top: 0;
   height: 60px;
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
   align-items: center;
-  outline: 1px solid rgb(163, 98, 238);
 }
 .navbar li{
   height: 30px;
   margin: 0 10px;
 }
-.navbar-item-icon{
+.navbar-logo{
   height: 50px;
   width: 100%;
   display: flex;
@@ -95,7 +104,7 @@ a{
   padding-left: 20px;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100vh;
   width: 250px;
   z-index: 1000;
@@ -179,7 +188,7 @@ a .menu{
   left: 0;
   width: 46%;
   position: relative;
-  outline: 2px solid rgb(0, 238, 255);
+  /* outline: 2px solid rgb(0, 238, 255); */
 }
 .hero-description{
   position: relative;
@@ -189,7 +198,7 @@ a .menu{
   width: 15%;
   margin-top: 30px;
   margin-bottom: 75px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 .underline{
  position: absolute;
