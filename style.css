@@ -93,8 +93,8 @@ nav ul li a:hover {
 
 .hamburger .line {
   width: 25px;
-  height: 1px;
-  background-color: #1f1f1f;
+  height: 2px;
+  background-color: #ffffff;
   display: block;
   margin: 7px auto;
   transition: all 0.3s ease-in-out;
@@ -162,10 +162,14 @@ nav ul li a:hover {
 }
 .hero-section{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr .5fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 30% 20%;
   padding-bottom: 20%;
   outline: 1px solid #0051ff;
+  align-items: center;
+}
+.grid-row-span{
+  grid-row: span 3;
 }
 .hero-title{
   display: flex;
@@ -190,7 +194,7 @@ nav ul li a:hover {
   width: 15%;
   height: auto;
   top:70%;
-  left: 33% ;
+  left: 25% ;
   /* outline: 1px solid yellow; */
 }
 .hero-images{
@@ -208,12 +212,10 @@ nav ul li a:hover {
   outline: 1px solid rgb(0, 238, 255);
   width: 80%;
   height: auto;
-  top: 15%;
+  top: 0;
   left: 20%;
 }
-.grid-row-span{
-  grid-row: span 3;
-}
+
 .grad-text{            
 background: linear-gradient(
   125deg,#3c1053, #AD5389); 
