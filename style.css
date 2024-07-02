@@ -51,7 +51,8 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg,#000000,#00000000);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
 }
 nav .logo-container {
@@ -59,10 +60,18 @@ nav .logo-container {
   align-items: center;
 }
 .logo{
-  height: 35px;
-  width: auto;
+  height: 100%;
+  width: 6%;
   margin-right: 10px;
 }
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -76,8 +85,8 @@ nav ul li a {
   font-size: 95%;
   font-weight: 400;
   padding: 4px 8px;
+  border: 2px solid #ffffff;
   border-radius: 20px;
-  border: 2px solid #00000000;
 }
 
 nav ul li a:hover {
@@ -122,7 +131,7 @@ nav ul li a:hover {
   transform: translateY(-5px) rotate(90deg);
 }
 
-.navbar {
+.menubar {
   position: absolute;
   top: 0;
   left: -60%;
@@ -138,26 +147,27 @@ nav ul li a:hover {
 }
 .active {
   left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.navbar ul {
+.menubar ul {
   padding: 0;
   list-style: none;
 }
-.navbar ul li {
+.menubar ul li {
   margin-bottom: 32px;
 }
 
-.navbar ul li a {
+.menubar ul li a {
   text-decoration: none;
-  color: #0000;
+  color: #000;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
-.navbar ul li a:hover {
+.menubar ul li a:hover {
   background-color: #f5f5f5;
 }
 .hero-section{
@@ -196,9 +206,7 @@ nav ul li a:hover {
 }
 .hero-images{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   grid-row: 1/4;
@@ -207,20 +215,21 @@ nav ul li a:hover {
 
 }
 .tequila{
+  display: flex;
   position: absolute;
-  width: 45%;
+  width: 55%;
   height: auto;
   top: 0%;
-  left: 0%;
+  left: 15%;
   outline: 1px solid yellow;
 }
 .perfume{
   display: flex;
   position: absolute;
-  width: 60%;
+  width: 70%;
   height: auto;
-  top: 0%;
-  left: 0%;
+  top:10%;
+  left: 30%;
   outline: 1px solid rgb(0, 238, 255);
 }
 .grad-text{  
@@ -270,13 +279,13 @@ nav ul li a:hover {
   content: "";
   z-index: -1;
   background-image:linear-gradient(
-    45deg,#3C1053 , #AD5389,#ffffff,#AD5389,#3C1053
+    45deg,#3C1053 , #AD5389,#0099fff1,#AD5389,#3C1053
   );
   position: absolute;
   top: -10px;
   left: -10px;
   border-radius: 20px;
-  background-size: 600%;
+  background-size: 400%;
   width: calc(100% + 20px);
   height: calc(100% + 20px);
   filter: blur(35px);
@@ -289,7 +298,7 @@ nav ul li a:hover {
   background-position: 0 0;
 }
 50%{
-  background-position: 400% 0;
+  background-position: 600% 0;
 }
 100%{
   background-position: 0 0;
