@@ -52,7 +52,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg,#000000,#00000000);
-  z-index: 1;
+  z-index: 999;
 }
 nav .logo-container {
   display: flex;
@@ -122,7 +122,7 @@ nav ul li a:hover {
   transform: translateY(-5px) rotate(90deg);
 }
 
-.menubar {
+.navbar {
   position: absolute;
   top: 0;
   left: -60%;
@@ -133,98 +133,100 @@ nav ul li a:hover {
   height: 100vh;
   padding: 20% 0;
   background: rgba(255, 255, 255);
+  border: none;
+  border-radius: 20%;
   transition: all 0.5s ease-in;
-  z-index: 2;
+  z-index: 999;
 }
 .active {
   left: 0;
 }
 
-.menubar ul {
+.navbar ul {
   padding: 0;
   list-style: none;
 }
-.menubar ul li {
+.navbar ul li {
   margin-bottom: 32px;
 }
 
-.menubar ul li a {
+.navbar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #0000;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
-.menubar ul li a:hover {
+.navbar ul li a:hover {
   background-color: #f5f5f5;
 }
 .hero-section{
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 30% 20%;
-  padding-bottom: 20%;
-  outline: 1px solid #0051ff;
+  position: relative;
+  grid-template-columns: 1fr 1.15fr;
+  grid-template-rows: 1fr .75fr .5fr;
   align-items: center;
-}
-.grid-row-span{
-  grid-row: span 3;
+  outline: 1px solid #0051ff;
 }
 .hero-title{
   display: flex;
-  color: #1f1f1f;
+  color: #242424;
   font-size:8vw;
-  outline: 1px solid #AD5389;
-  /* width: 40vw; */
-  /* height: auto; */
+  width: 40vw;
+  height: auto;
   margin: 0;
+  /* outline: 1px solid #AD5389; */
 }
 .hero-description{
   position: relative;
-  outline: 1px solid #AD5389;
   font-size: 3vw;
-  /* width: 40vw; */
-  /* height: auto; */
   margin: 0;
-  padding-bottom: 3vw;
-}
-.underline{
-  position: absolute;
-  width: 15%;
-  height: auto;
-  top:70%;
-  left: 25% ;
-  /* outline: 1px solid yellow; */
+  grid-row:2/3;
+  grid-column: 1/2;
+  /* outline: 1px solid #AD5389; */
 }
 .hero-images{
-  position: relative;
+  position: absolute;
+  grid-row: 1/4;
+  grid-column: 2/3;
   outline: 1px solid rgb(255, 0, 0);
+  z-index: -1;
 }
 .tequila{
-  position:absolute;
   outline: 1px solid yellow;
   width: 70%;
+  top: 0%;
+  left: 0%;
   height: auto;
 }
 .perfume{
   position: absolute;
-  outline: 1px solid rgb(0, 238, 255);
-  width: 80%;
+  width: 60%;
   height: auto;
-  top: 0;
-  left: 20%;
+  top: 0%;
+  left: 0%;
+  /* outline: 1px solid rgb(0, 238, 255); */
 }
-
-.grad-text{            
-background: linear-gradient(
+.grad-text{  
+  position: relative;          
+  background: linear-gradient(
   125deg,#3c1053, #AD5389); 
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
+  /* outline: 1px solid rgb(0, 238, 255); */
+}
+.underline{
+  position: absolute;
+  width:100%;
+  height: auto;
+  top:87%;
+  left: 0% ;
+  /* outline: 1px solid yellow; */
 }
 .readmore-button {
   position: relative;
-  margin: 50px 100px;
   width: 185px; 
   height: 55px; 
   background: linear-gradient(to right, #3C1053 , #AD5389); 
@@ -237,10 +239,11 @@ background: linear-gradient(
   align-items: center;
   cursor: pointer; 
   text-decoration: none; 
-  z-index: inherit;
+  z-index: 2;
   cursor: pointer;
+
 }
-  .readmore-button::after{
+.readmore-button::after{
   content: "";
   z-index: -1;
   position: absolute;
@@ -249,27 +252,28 @@ background: linear-gradient(
   height: 95%;
   border: none;
   border-radius: 30px;
+  
 }
 .readmore-button::before{
   content: "";
   z-index: -1;
   background-image:linear-gradient(
     45deg,#3C1053 , #AD5389,#ffffff,#AD5389,#3C1053
-    );
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    border-radius: 20px;
-    background-size: 600%;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    filter: blur(35px);
-    animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
-    opacity: 0;
-  }
-  @keyframes glowing {
-    0%{
+  );
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 20px;
+  background-size: 600%;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  filter: blur(35px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+}
+@keyframes glowing {
+  0%{
   background-position: 0 0;
 }
 50%{
@@ -299,10 +303,10 @@ justify-content: right;
 
 }
 @media screen and (max-width: 790px) {
-.hamburger {
-  display: block;
-}
-nav ul {
-  display: none;
-}
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
 }
