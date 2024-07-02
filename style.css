@@ -52,7 +52,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg,#000000,#00000000);
-  z-index: 999;
+  z-index: 1;
 }
 nav .logo-container {
   display: flex;
@@ -133,10 +133,8 @@ nav ul li a:hover {
   height: 100vh;
   padding: 20% 0;
   background: rgba(255, 255, 255);
-  border: none;
-  border-radius: 20%;
   transition: all 0.5s ease-in;
-  z-index: 999;
+  z-index: 2;
 }
 .active {
   left: 0;
@@ -166,7 +164,7 @@ nav ul li a:hover {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1.15fr;
-  grid-template-rows: 1fr .75fr .5fr;
+  grid-template-rows: 50% 30% 20%;
   align-items: center;
   outline: 1px solid #0051ff;
 }
@@ -176,38 +174,54 @@ nav ul li a:hover {
   font-size:8vw;
   width: 40vw;
   height: auto;
-  margin: 0;
+  margin-top: 10%;
   /* outline: 1px solid #AD5389; */
 }
 .hero-description{
   position: relative;
   font-size: 3vw;
-  margin: 0;
+  margin:0;
   grid-row:2/3;
   grid-column: 1/2;
   /* outline: 1px solid #AD5389; */
 }
+.hero-button-container{
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18% 0;
+  grid-row:3/4;
+  grid-column: 1/2;
+}
 .hero-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  width: 100%;
+  height: 100%;
   grid-row: 1/4;
   grid-column: 2/3;
-  outline: 1px solid rgb(255, 0, 0);
-  z-index: -1;
+  /* outline: 10px solid rgb(0, 183, 255); */
+
 }
 .tequila{
-  outline: 1px solid yellow;
-  width: 70%;
+  position: absolute;
+  width: 45%;
+  height: auto;
   top: 0%;
   left: 0%;
-  height: auto;
+  outline: 1px solid yellow;
 }
 .perfume{
+  display: flex;
   position: absolute;
   width: 60%;
   height: auto;
   top: 0%;
   left: 0%;
-  /* outline: 1px solid rgb(0, 238, 255); */
+  outline: 1px solid rgb(0, 238, 255);
 }
 .grad-text{  
   position: relative;          
@@ -227,23 +241,22 @@ nav ul li a:hover {
 }
 .readmore-button {
   position: relative;
-  width: 185px; 
-  height: 55px; 
+  width: 14vw;
+  height: 4vw;
   background: linear-gradient(to right, #3C1053 , #AD5389); 
   background-repeat: no-repeat;
   background-position: left center; 
   background-size: contain; 
   border: none; 
-  border-radius: 30px;
+  border-radius:2rem;
   display:flex;
   align-items: center;
   cursor: pointer; 
   text-decoration: none; 
-  z-index: 2;
+  z-index: inherit;
   cursor: pointer;
-
 }
-.readmore-button::after{
+  .readmore-button::after{
   content: "";
   z-index: -1;
   position: absolute;
@@ -252,7 +265,6 @@ nav ul li a:hover {
   height: 95%;
   border: none;
   border-radius: 30px;
-  
 }
 .readmore-button::before{
   content: "";
@@ -289,15 +301,15 @@ opacity: 1;
 
 .read-more-icon{
 box-sizing: border-box;
-height: 40px;
-width: 40px;
+height: auto;
+width: 2.5vw;
 padding:0;
-margin: 10px;
+margin: 8%;
 
 }
 .read-more-text{
 display: flex;
-font-size: 20px;
+font-size: 1.25vw;
 padding-left: none;
 justify-content: right;
 
