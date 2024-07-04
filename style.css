@@ -229,6 +229,7 @@ text-decoration: none;
   height: auto;
   top: 0%;
   left: 15%;
+  z-index: 4;
   /* outline: 1px solid yellow; */
 }
 .perfume{
@@ -238,6 +239,27 @@ text-decoration: none;
   height: auto;
   top:10%;
   left: 30%;
+  z-index: 3;
+  /* outline: 1px solid rgb(0, 238, 255); */
+}
+.contour-1{
+  display: flex;
+  position: absolute;
+  width: 55%;
+  height: auto;
+  top: 10%;
+  left: 13%;
+  z-index: 2;
+  /* outline: 1px solid yellow; */
+}
+.contour-2{
+  display: flex;
+  position: absolute;
+  width: 70%;
+  height: auto;
+  top:-5%;
+  left: 30%;
+  z-index: 1;
   /* outline: 1px solid rgb(0, 238, 255); */
 }
 .grad-text{  
