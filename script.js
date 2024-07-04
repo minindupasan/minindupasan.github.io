@@ -1,8 +1,8 @@
-const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".navbar");
-
-const toggleNav = () => {
-  navbar.classList.toggle("active");
-  mobileNav.classList.toggle("hamburger-active");
-};
-mobileNav.addEventListener("click", () => toggleNav());
+const button = document.querySelector(".readmore-button");
+button.addEventListener("click", (e) => {
+  e.preventDefault;
+  button.classList.add("animate");
+  setTimeout(() => {
+    button.classList.remove("animate");
+  }, 600);
+});
