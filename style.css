@@ -28,7 +28,6 @@ text-decoration: none;
   font-style:normal;
   
 }
-
 .poppins-semibold {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -49,32 +48,28 @@ text-decoration: none;
   top: 0;
   left: 0;
   height: 100%;
-  width: 85px;
+  width: 5%;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
   flex-direction: column;
   background: #000000;
-  padding: 25px 20px;
+  padding: 25px 0;
   transition: all 0.4s ease;
   z-index: 1000;
 }
-
 .sidebar:hover {
-  width: 260px;
+  width: 250px;
 }
-
 .sidebar .sidebar-header {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .sidebar .sidebar-header img {
   position: absolute;
   width: 2rem;
 }
-
 .sidebar .sidebar-header h2 {
   position: absolute;
   left: 1.15rem;
@@ -91,7 +86,6 @@ text-decoration: none;
 .sidebar:hover .sidebar-header h2 {
   color: #ffffff;
 }
-
 .sidebar-links {
   list-style: none;
   margin-top: 20px;
@@ -107,6 +101,8 @@ text-decoration: none;
   display: flex;
   margin: 5% 0;
   margin-right: 15%;
+  width: 30%;
+  height: 100%;
 }
 .sidebar-links li{
   display: flex;
@@ -135,10 +131,14 @@ text-decoration: none;
 .sidebar-links li a:hover {
   color: #BB86FC;
   border: 1px solid #BB86FC;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 .sidebar-links li a:hover .icon-fill{
   fill: #BB86FC;
+}
+.sidebar:hover .user-account {
+  background: #fff;
+  border-radius: 4px;
 }
 .user-account {
   margin-top: auto;
@@ -173,10 +173,6 @@ text-decoration: none;
   white-space: nowrap;
 }
 
-.sidebar:hover .user-account {
-  background: #fff;
-  border-radius: 4px;
-}
 .hero-section{
   display: grid;
   position: relative;
@@ -301,18 +297,18 @@ text-decoration: none;
   }
   .readmore-button.animate::before {
     top: -70%;
-  background-image: radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%),
-    radial-gradient(circle, #ffffff 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
-  animation: greentopBubbles ease-in-out 0.6s forwards infinite;
+    background-image: radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%),
+      radial-gradient(circle, #ffffff 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    animation: greentopBubbles ease-in-out 0.6s forwards infinite;
 }
 @keyframes greentopBubbles {
   0% {
@@ -367,11 +363,58 @@ text-decoration: none;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-@media screen and (max-width: 790px) {
-  .hamburger {
-    display: block;
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
   }
-  nav ul {
+  .sidebar-links{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* outline: 1px solid #0051ff; */
+  }
+  .sidebar-links li a{
+    margin: 0%;
+    padding: 0%;
+  }
+  .sidebar-links li a:hover {
+    color: #BB86FC;
+    border:none;
+    border-radius: 0%;
+    background: none;
+  }
+  .sidebar-links li:hover {
+    background:none;
+  }
+  .sidebar-links .sidebar-icons{
+    padding: 0;
+    margin: 0%;
+    width: 80%;
+  }
+  .sidebar:hover {
+    width: 100%;
+  }
+  .sidebar-text{
+    display: none;
+  }
+  .user-account{
+    display: none;
+  }
+  .sidebar-header .sidebar-logo-text{
+    display: none;
+  }
+  .sidebar-header svg{
     display: none;
   }
 }
