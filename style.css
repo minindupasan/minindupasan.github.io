@@ -54,7 +54,7 @@ text-decoration: none;
   overflow-x: hidden;
   flex-direction: column;
   background: #000000;
-  padding: 25px 0;
+  padding: 2% 1%;
   transition: all 0.4s ease;
   z-index: 1000;
 }
@@ -144,8 +144,7 @@ text-decoration: none;
   margin-top: auto;
   padding: 12px 10px;
   margin-left: -10px;
-}
-
+}                        
 .user-profile {
   display: flex;
   align-items: center;
