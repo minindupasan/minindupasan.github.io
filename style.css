@@ -65,51 +65,53 @@ text-decoration: none;
 }
 
 .sidebar .sidebar-header {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
 .sidebar .sidebar-header img {
+  position: absolute;
   width: 2rem;
 }
 
 .sidebar .sidebar-header h2 {
-  color: #000000;
-  font-size: 1.25rem;
-  font-weight: 600;
+  position: absolute;
+  left: 1.15rem;
+  top: -1.55rem;
+  color: #ffffff00;
+  font-family: "Bree Serif", serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.8rem;
   white-space: nowrap;
   margin-left: 23px;
+  transition: all 0.4s ease;
 }
-
-.sidebar-links h4 {
-  color: #000000;
-  font-weight: 500;
-  white-space: nowrap;
-  margin: 10px 0;
-  position: relative;
-}
-
-.sidebar-links h4 span {
-  opacity: 0;
-}
-
-.sidebar:hover .sidebar-links h4 span {
-  opacity: 1;
-}
-
-.sidebar:hover .sidebar-links .menu-separator {
-  transition-delay: 0s;
-  transform: scaleX(0);
+.sidebar:hover .sidebar-header h2 {
+  color: #ffffff;
 }
 
 .sidebar-links {
   list-style: none;
   margin-top: 20px;
   height: 80%;
+  padding: 0;
   overflow-y: auto;
   scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
+.sidebar-icons{
+  display: flex;
+  margin: 5% 0;
+  margin-right: 15%;
+}
+.sidebar-links li{
+  display: flex;
+  align-items: space-evenly;
+}
 .sidebar-links::-webkit-scrollbar {
   display: none;
 }
@@ -118,13 +120,14 @@ text-decoration: none;
 }
 .sidebar-links li a {
   display: flex;
-  margin: 25% 0;
   align-items: center;
+  justify-content: center;
   gap: 0 20px;
   color: #fff;
   font-weight: 500;
   white-space: nowrap;
-  padding: 15px 10px;
+  padding: 10% 20px;
+  padding-right: 40px;
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -172,7 +175,6 @@ text-decoration: none;
   background: #fff;
   border-radius: 4px;
 }
-
 .hero-section{
   display: grid;
   position: relative;
