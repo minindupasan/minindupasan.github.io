@@ -200,10 +200,12 @@ text-decoration: none;
   height: auto;
   line-height: 90%;
   text-align: center;
-  margin-top: 10%;
+  margin: 10% 0;
+  margin-bottom: 0%;
   left: 25%;
-  /* outline: 1px solid #AD5389; */
+  transition: all 0.5s ease;
 }
+
 .hero-description{
   position: relative;
   left: 25%;
@@ -211,7 +213,6 @@ text-decoration: none;
   margin:0;
   grid-row:2/3;
   grid-column: 1/2;
-  /* outline: 1px solid #AD5389; */
 }
 .hero-images{
   display: flex;
@@ -220,8 +221,6 @@ text-decoration: none;
   height: 100%;
   grid-row: 1/4;
   grid-column: 2/3;
-  /* outline: 10px solid rgb(0, 183, 255); */
-  
 }
 .tequila{
   display: flex;
@@ -231,7 +230,6 @@ text-decoration: none;
   top: 0%;
   left: 15%;
   z-index: 4;
-  /* outline: 1px solid yellow; */
 }
 .perfume{
   display: flex;
@@ -241,7 +239,6 @@ text-decoration: none;
   top:10%;
   left: 30%;
   z-index: 3;
-  /* outline: 1px solid rgb(0, 238, 255); */
 }
 .contour-1{
   display: flex;
@@ -251,7 +248,6 @@ text-decoration: none;
   top: 10%;
   left: 13%;
   z-index: 2;
-  /* outline: 1px solid yellow; */
 }
 .contour-2{
   display: flex;
@@ -261,7 +257,6 @@ text-decoration: none;
   top:-5%;
   left: 30%;
   z-index: 1;
-  /* outline: 1px solid rgb(0, 238, 255); */
 }
 .grad-text{  
   position: relative;          
@@ -269,7 +264,6 @@ text-decoration: none;
     125deg,#3c1053, #AD5389); 
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
-    /* outline: 1px solid rgb(0, 238, 255); */
   }
   .underline{
     position: absolute;
@@ -277,7 +271,6 @@ text-decoration: none;
     height: auto;
     top:87%;
     left: 0% ;
-    /* outline: 1px solid yellow; */
   }
   .readmore-button {
     position: relative;
@@ -344,6 +337,13 @@ text-decoration: none;
       10% 10%, 18% 18%;
     animation: greentopBubbles ease-in-out 0.6s forwards infinite;
 }
+.hero-title:hover{
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
 @keyframes greentopBubbles {
   0% {
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
