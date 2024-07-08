@@ -3,11 +3,15 @@ box-sizing: border-box;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
 color: #ffffff;
 padding: 0;
 font-family: "Poppins", sans-serif;
 background-color: rgb(20,20,20);
+margin: 0 2vw;
 }
 
 a{
@@ -47,7 +51,7 @@ text-decoration: none;
   top: 0;
   left: 0;
   height: 100%;
-  width: 5vw;
+  width: 5.5vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -261,7 +265,7 @@ text-decoration: none;
 .grad-text{  
   position: relative;          
   background: linear-gradient(
-    125deg,#3c1053, #AD5389); 
+    125deg,#FF512F  , #DD2476); 
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
   }
@@ -398,12 +402,83 @@ text-decoration: none;
   }
 }
 
-#projects-title{
+.title{
   font-weight: 600;
   margin-left: 7%;
-  font-size: 2vw;
-  padding: .5vw 2vw;
-  border-bottom: .25vw dashed #ffffff;
+  font-size: 3vw;
+  padding: .5vw 5.5vw;
+  color: #ffffff;
+}
+.sub-title{
+  width: 50vw;
+  font-weight: 600;
+  margin-left: 7%;
+  font-size: 2.5vw;
+  padding: .5vw 5.5vw;
+  color: #b0b0ba;
+}
+.services-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5% 0;
+  margin-left: 2.5%;
+  /* outline: 1px solid #ff0000;  */
+
+}
+.services-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* outline: 2px solid #DD2476; */
+}
+.list-container{
+  font-weight: 500;
+  font-size: 1.6vw;
+  text-align: center;
+  color: #ffffff;
+  /* outline: 1px solid #8222ff7c; */
+  margin: 1vw 0;
+  padding: 2vw 1vw;
+  background: rgba(255, 255,255,0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.9px);
+  -webkit-backdrop-filter: blur(8.9px);
+}
+.list-container:hover{
+  color: black;
+}
+.list-title{
+  font-weight: 600;
+  font-size: 4vw;
+  padding: 1vw 5.5vw;
+  color: #ffffff;
+}
+.list-container:hover > #list-title-1{
+  background: linear-gradient(125deg, #D4145A , #FBB03B);
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+}
+#list-container-1:hover{
+  background: linear-gradient(125deg, #FFECD2  , #FCB69F);
+}
+.list-container:hover > #list-title-2{
+  background: linear-gradient(125deg, #11998E  , #38EF7D);
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+}
+#list-container-2:hover{
+  background: linear-gradient(125deg, #A9F1DF   , #FFBBBB);
+}
+.list-container:hover > #list-title-3{
+  background: linear-gradient(125deg, #662D8C   , #ED1E79);
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+}
+#list-container-3:hover{
+  background: linear-gradient(125deg, #EE9CA7  , #FFDDE1);
 }
 .wrapper {
   width: 100vw;
@@ -538,7 +613,7 @@ input:checked + label .description {
 #note{
   display: flex;
   font-style: italic;
-  font-size: .8vw;
+  font-size: 1vw;
   text-align: center;
   justify-content: center;
   margin-left: 7%;
