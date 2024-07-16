@@ -198,7 +198,7 @@ text-decoration: none;
 .hero-title{
   display: flex;
   position: relative;
-  color: #242424;
+  color: #3b3b3b;
   font-size:8vw;
   width: 40vw;
   height: auto;
@@ -440,7 +440,7 @@ text-decoration: none;
   color: #ffffff;
   /* outline: 1px solid #8222ff7c; */
   margin: 1vw 0;
-  padding: 2vw 1vw;
+  padding: 2vw 1.5vw;
   background: rgba(255, 255,255,0.05);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -457,28 +457,34 @@ text-decoration: none;
   color: #ffffff;
 }
 .list-container:hover > #list-title-1{
-  background: linear-gradient(125deg, #D4145A , #FBB03B);
+  background: linear-gradient(125deg,#FBB03B ,#D4145A );
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
+  transition: all 1s ease;
 }
 #list-container-1:hover{
   background: linear-gradient(125deg, #FFECD2  , #FCB69F);
+  transition: all .5s ease;
 }
 .list-container:hover > #list-title-2{
-  background: linear-gradient(125deg, #11998E  , #38EF7D);
+  background: linear-gradient(125deg, #16ba55,#22a2b6);
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
+  transition: all 1s ease;
 }
 #list-container-2:hover{
   background: linear-gradient(125deg, #A9F1DF   , #FFBBBB);
+  transition: all .5s ease;
 }
 .list-container:hover > #list-title-3{
   background: linear-gradient(125deg, #662D8C   , #ED1E79);
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
+  transition: all 1s ease;
 }
 #list-container-3:hover{
   background: linear-gradient(125deg, #EE9CA7  , #FFDDE1);
+  transition: all .5s ease;
 }
 .wrapper {
   width: 100vw;
