@@ -812,3 +812,27 @@ input:checked + label .description {
     display: none;
   }
 }
+.social-media-container{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 0%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0 25vw;
+  margin: 7.5vw 0;
+  margin-left: 2.5%;
+  /* outline: 1px solid #ff0000;  */
+}
+#github-icon > a > svg{
+  width: 3vw;
+  height: 3vw;
+}
+#instagram-icon > a > svg{
+  width: 3vw;
+  height: 3vw;
+}
+#linkedin-icon > a > svg{
+  width: 5vw;
+  height: 5vw;
+}
