@@ -221,6 +221,11 @@ text-decoration: none;
   top: 0%;
   left: 15%;
   z-index: 4;
+  transition: all 0.5s ease;
+}
+.tequila:hover{
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 .perfume{
   display: flex;
@@ -230,6 +235,11 @@ text-decoration: none;
   top:10%;
   left: 30%;
   z-index: 3;
+  transition: all 0.5s ease;
+}
+.perfume:hover{
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 .contour-1{
   display: flex;
